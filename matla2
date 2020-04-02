@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var x=prompt("Enter first x");
+         if(x>928||x<532)
+         alert(x);
+        
+        // matla 2
+         var x,y,z;
+                 var x=prompt("Enter first x");
+                 var y= prompt("Enter first y");
+                 var z=  prompt("Enter first z");
+                 if(x>y&&y<z)
+                 alert("increasing");
+
+                // matla 3
+                 var adam=prompt("Enter 1 num");
+        var waheeb=prompt("Enter 2num");
+        if(waheeb>adam)
+        alert("growing");
+        
+   // matla 4
+        var x;
+     var x=prompt("Enter x");
+     if(x%2==0){alert("even")
+     }        
+     else
+        alert("odd")  
+        
+       // matla 5
+        var x=prompt("Enter first x");
+     var y=prompt("Enter secend y");
+     if(x>y){ alert(y)
+     alert(x)
+
+     }
+        else{alert(x)
+     alert(y)}     
+     //matla 6
+     var x=prompt("enter num")
+        if(x>0)
+        alert("mogb")
+        if(x<0)
+        alert("shlele")
+        if(x==0)
+        alert("zero")
+
+
+    </script>
+    
+</body>
+</html>
