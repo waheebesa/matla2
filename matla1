@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>matlasdsd</title>
+    <h1>whaeeb</h1>
+</head>
+<body>
+    <script>
+    var firstname='waheeb',lastname='esa'
+    fullname=firstname+lastname;
+  alert(fullname);
+  console.log(fullname);
+
+    </script>
+    
+</body>
+</html>
