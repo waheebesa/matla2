@@ -1,0 +1,33 @@
+using System;
+
+namespace waheeb
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter length of array: ");
+
+            // length of array>>
+            int lengthOfArray = Convert.ToInt32(Console.ReadLine());
+
+
+            // number to multiply cells>>
+            Console.WriteLine("Enter number to multiply: ");
+            int NumToMul = Convert.ToInt32(Console.ReadLine());
+
+
+            // initialize array>>
+            int[] arr = new int[lengthOfArray];
+
+            Console.WriteLine($"Num of elements: {lengthOfArray}, num to mul:{NumToMul}");
+            for (int a = 0; a < arr.Length;a++)
+            {
+                arr[a] = a * NumToMul;
+                Console.Write(arr[a] + ", ");
+            }
+        }
+    }
+}
