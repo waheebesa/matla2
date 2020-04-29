@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isa</title>
+</head>
+<body>
+<script>
+    // שאלה מספר 1
+    function reverse_a_number(n) // פוקציה שמקבלת מספר וגם מחזירה מספר
+    {
+    	n = n + ""; //פקודה שעוזרת לנו לעשות את הספר הפוך
+	    return n.split("").reverse().join(""); // כמו שלמנו בקורס html css על reverse שעוזר לנו להפוך את המספר
+    }
+    console.log(reverse_a_number(123456)); // הדפסה ל console
+    // סיום של שאלה מספר 1
+    // שאלה מספר 2
+      var num = Number(prompt("Eneter Any Number"));
+      function prime(num)
+      {
+         if (num === 1)
+         {
+            return false;
+         }
+         else
+         {
+            for(var x = 2; x < num; x++) // בבדיקה שזו מתחילים במספר 2 ולמעלה
+            {
+               if(num % x === 0) // הפקודה הבסיסית של בדיקה אם המספר שרוצים אם הוא ראשוני או לא
+               {
+                  return false;
+               }
+            }
+         return true;  
+         }
+      }
+      console.log(prime(num)); // הדפסת מספר שאנחנו רוצים ךדעת אם הוא ראשוני או לא
+// סיום של שאלה 2
+// שאלה 3
+console.log(typeof 7); // number
+
+console.log(typeof 'Isa'); // string
+
+console.log(typeof true); // boolean
+
+console.log(typeof undefined); // undefined
+
+console.log(typeof([1,2,3])); // object
+
+console.log(typeof(func)); // function
+
+function func()
+{
+    console.log("I am func");
+}
+//סיום של שאלה 3
+// שאלה 4
+var num = Number( prompt( " 1 . 2 . 3 . 4 \n choose one : ")); // לבחור מספר מ 1 עד 4 
+   var n = Number(prompt("Eneter Any Number"));  // הקלטת מספר שאתה רוצה לראות אותו בדולר או ביורו...
+   switch(num) // בעזרת סוויץ אנחנו יכולים לעשות כמה דברים ביחד וזו דרך הכי טובה וברורה לנו
+   {
+    case 1:dollar = n /3.55;
+    console.log(dollar);
+	break;
+    case 2:shekel = n*3.55;
+    console.log(shekel);
+	break;
+    case 3:euro = n/3.85;
+    console.log(euro);
+	break;
+    case 4:shekel = n*3.85;
+    console.log(shekel);
+	break;
+    default:
+    console.log(" we can not ");
+   }
+</script>
+</body>
+</html>
