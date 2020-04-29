@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muayad</title>
+</head>
+<body>
+    
+    <script>
+        // שאלה 1
+        var name = prompt("Enter your name:"); // מבקש מהמשתשם את השם 
+        var sec = Number(prompt("Enter seconds:")); // לקלוט את השניות שיופיע את השם 
+        setTimeout(
+            function(){
+                alert("Your name is: " + name) 
+            },sec*1000 // השניות שאת מגדיר אותם 
+        );
+        var as1 = Number(prompt("Enter as1")); // מבקש מהמשתמש את השני מספרים הוא רוצה 
+        var as2 = Number(prompt("Enter as2"));
+        var count = 0; // ערך התחלתי
+
+        for(var x=0; x < as2; x++){
+            setTimeout(
+                function(){
+                    console.log(`Message number: ${count++}`); // הדפסה של כמה המספרים לפי המסרים שרציתה 
+                }
+                ,as1*1000*x) // זמן בין כל מספר להופיע 
+        };
+        // סיום שאלה 1
+        // שאלה 2
+        var arr = ['Muayad','Adam', 'Mohannad', 'Abed']; // מערך 
+        for (var i = 0; i < arr.length; i++) {
+        setTimeout(
+            function () {
+                console.log(arr); // הדפסת מערך 
+           },4000 * i) // 4 שניות ו
+        } // ו4 פעמים מופיע המערך 
+        // כל 4 שניות יופיע את המערך ורק ארבעה פעמים ויעצור
+        // סיום שאלה 2
+        // שאלה 3
+        var num = Number(prompt("Enter num"));
+        function Func() {
+          
+          console.log(Math.sqrt(num)); // שורש של num
+        }
+        Func();
+        // סיום שאלה 3
+        // שאלה 4
+        var num1 = Number(prompt("Enter num1"));
+        var num2 = Number(prompt("Enter num2"));
+        function Func1() {
+          
+          
+          console.log(Math.pow(num1, num2));    // num1 בחזקה num2
+ 
+        }
+        Func1();
+        // סיום שאלה 4
+        // שאלה 5
+        function Func2() {
+          
+            var str = " LYRICS            You shout it out            But I can't hear a word you say            I'm talking loud not saying much          I'm criticized but all your bullets ricochet            You shoot me down, but I get up   I'm bulletproof nothing to lose ";
+            console.log(str.slice(0, 8)); // לגשת למילה הראשונה בשיר 
+            console.log(str.toLowerCase(0, 8)); // להפוף את המילה הראשונה לאותיות קטנות
+        }
+        Func2();
+        // סיום שאלה 5
+        /*
+        function Func3() {
+          
+            var str1 = "LYRICS YOU SHOUT IT OUT";
+            console.log(str1.toLowerCase()); // להפוך את כל המשפט לאותיות קטנות 
+        }
+        Func3();
+        */
+        // רשמתי שיר קטן ולא גדול בגלל שתדעי שאני מבין את הרעיון ותודה
+    </script>
+</body>
+</html>
