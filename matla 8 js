@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center> 
+    <style type="text/css"> /*<center> : אמצע הדף */
+        table.ISA /*  צבע  לרקע  של המחשבון */
+        {
+             background-color: rgb(18, 222, 236); 
+             border-radius: 20px;
+             border: 10px solid red;
+
+        }
+        input.calc { /* צבע (/*-+.=) */
+             width: 100%;
+             margin: 3px;
+             background-color: rgb(14, 136, 236);
+             font-size: 20px;
+             border-radius: 20px;
+             height: 70px;
+             padding: 20px;
+             border: 10px solid red;
+        }
+        input.M { /* צבע לטיבת TEXT*/
+            width: 100%;
+            margin: 3px;
+            background-color: rgb(14, 136, 236);
+            font-size: 20px;
+            border-radius: 20px;
+            height: 70px;
+            padding: 20px;
+            border: 10px solid blue;
+        }
+        
+        input.F { /* צבע למספרים */
+            background-color: rgb(115, 117, 138); 
+            width: 100%;
+            margin: 3px;
+            font-size: 20px;
+            border-radius: 20px;
+            height: 70px;
+            padding: 20px;
+            border: 10px solid white;
+        } /*כמה עיצובים בעזרת מה שלמתי בסמסטר שעבר CSS CSS3 BOOTSTRAP..*/
+        /*<table class="ISA" cellpadding=6>: רווח בין כל אלמינט */
+        </style> 
+        <table class="ISA" cellpadding=6> 
+            
+        <tr><td colspan=3><input class="M" id="screen" type="text"></td></tr>
+        <tr>
+        <td><input class="F" type="button" value=1 onclick="pushButton(this.value);"></td>
+        <td><input class="F" type="button" value=2 onclick="pushButton(this.value);"></td>
+        <td><input class="F" type="button" value=3 onclick="pushButton(this.value);"></td>
+        <td><input class="calc" type="button" value='/' onclick="pushButton(this.value);"></td>
+        </tr>
+        <tr>
+        <td><input class="F" type="button" value=4 onclick="pushButton(this.value);"></td>
+        <td><input class="F" type="button" value=5 onclick="pushButton(this.value);"></td>
+        <td><input class="F" type="button" value=6 onclick="pushButton(this.value);"></td>
+        <td><input class="calc" type="button" value='*' onclick="pushButton(this.value);"></td>
+        </tr>
+        <tr>
+        <td><input class="F" type="button" value=7 onclick="pushButton(this.value);"></td>
+        <td><input class="F" type="button" value=8 onclick="pushButton(this.value);"></td>
+        <td><input class="F" type="button" value=9 onclick="pushButton(this.value);"></td>
+        <td><input class="calc" type="button" value='-' onclick="pushButton(this.value);"></td>
+        </tr>
+        <tr>
+        <td><input class="F" type="button" value=0 onclick="pushButton(this.value);"></td>
+        <td><input class="calc" type="button" value='.' onclick="pushButton(this.value);"></td>
+        <td><input class="F" type="button" value='C' onclick="pushButton(this.value);"></td>
+        <td><input class="calc" type="button" value='+' onclick="pushButton(this.value);"></td>
+        </tr>
+        <tr>
+        <td colspan=3><input class="calc" type="button" value='=' onclick="calculate(document.getElementById('screen').value);"></td></tr>
+        </table>        
+        
+        <script> /* TABLE : מה שעשיתי בבקודה הזו הגדרתי את המפרים והסדר של המספרים עם חישוב והפעלה של פוקציה מסוימת */
+        document.body.style.backgroundColor = "blue";
+        console.log(document.body.style.backgroundColor); // צבע רקע לכל הדף 
+        function pushButton(buttonValue)
+        {
+             if (buttonValue == 'C') 
+             {
+                  document.getElementById('screen').value = ''; // פוקצית שאומרת אם אתה לוחץ על אות C הוא ימחק את כל השורה
+             }
+             else
+             {
+                  document.getElementById('screen').value += buttonValue; // פוקציה לחישוב שני מספרים 
+             }
+        }
+        function calculate(equation)
+        {
+             var answer = eval(equation);
+             document.getElementById('screen').value = answer; // פוקציה ישורת מהפוקציה השנייה והיא מחזירה את התשובה של שני מספרים 
+        }
+        /* בSCRIPT: עשיתי פוקציות בכדי להפעיל אותם בתוך TABLE
+        */
+    </script>
+</body>
+</html>
