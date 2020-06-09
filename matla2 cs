@@ -1,0 +1,30 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[][] arr = new string[][]
+               {
+                new string[]{"main","up"," sub"},
+                new string[]{"down","center","up"},
+                new string[]{"sub","down"," main"},
+               };
+
+            foreach (string[] Row in arr)
+            {
+                foreach (string Col in Row)
+                {
+                    Console.Write($" [ {Col} ] ");
+                }
+                Console.WriteLine();
+            }
+
+
+
+            Console.ReadKey();
+        }
+    }
+}
